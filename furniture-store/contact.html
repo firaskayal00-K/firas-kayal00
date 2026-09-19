@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us — Wren &amp; Oak</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main class="container">
+  <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+
+  <section class="section">
+    <span class="eyebrow">Get in Touch</span>
+    <h1 style="font-size:32px;">We're happy to help</h1>
+    <p style="max-width:520px;">Questions about a piece, a bulk/trade order, or an existing order? Send a message and we'll reply within one business day — or reach us instantly on WhatsApp.</p>
+
+    <div class="contact-grid" style="margin-top:32px;">
+      <div class="info-card">
+        <h3 style="font-size:17px;margin-bottom:16px;">Send a Message</h3>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-field"><label>Name</label><input required placeholder="Your name"></div>
+            <div class="form-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+            <div class="form-field full"><label>Subject</label><input required placeholder="How can we help?"></div>
+            <div class="form-field full"><label>Message</label><textarea rows="5" required placeholder="Tell us a bit more..."></textarea></div>
+          </div>
+          <button class="btn btn-primary" type="submit" style="margin-top:16px;">Send Message</button>
+          <div class="promo-msg ok" id="contact-msg"></div>
+        </form>
+      </div>
+
+      <div>
+        <div class="info-card" style="margin-bottom:20px;">
+          <h3 style="font-size:15px;display:flex;align-items:center;gap:8px;"><span id="ic-pin"></span> Showroom</h3>
+          <p>142 Birchwood Avenue, Riverside District</p>
+          <h3 style="font-size:15px;display:flex;align-items:center;gap:8px;"><span id="ic-mail"></span> Email</h3>
+          <p>hello@wrenandoak.example</p>
+          <h3 style="font-size:15px;display:flex;align-items:center;gap:8px;"><span id="ic-phone"></span> Phone</h3>
+          <p>+1 (555) 010-0192</p>
+          <a href="#" id="whatsapp-link" class="btn whatsapp-btn btn-block" target="_blank" rel="noopener"><span id="ic-wa"></span> Chat on WhatsApp</a>
+        </div>
+        <div class="map-placeholder">Map placeholder — embed your showroom's location here</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wren &amp; Oak — Furniture for warmer, calmer homes</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">New Autumn Collection</span>
+        <h1>Furniture that feels like<br>home from day one.</h1>
+        <p class="lead">Thoughtfully designed chairs, tables, and sofas in natural materials — built to last, easy to live with.</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
+          <a href="about.html" class="btn btn-outline">Visit the Showroom</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="art" data-material="Wood" id="hero-art" style="aspect-ratio:4/3.1;box-shadow:var(--shadow-lg);"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Browse</span>
+        <h2>Shop by Category</h2>
+      </div>
+      <a href="shop.html" class="link-arrow">View all products →</a>
+    </div>
+    <div class="cat-grid" id="cat-grid"></div>
+  </section>
+
+  <section class="section container" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Loved by customers</span>
+        <h2>Bestsellers</h2>
+      </div>
+      <a href="shop.html?sort=bestselling" class="link-arrow">See all bestsellers →</a>
+    </div>
+    <div class="product-grid" id="bestsellers-grid"></div>
+  </section>
+
+  <section class="section container" style="padding-top:0;">
+    <div class="split-block">
+      <div class="art" data-material="Fabric" id="story-art" style="aspect-ratio:4/3.3;"></div>
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h2>Made slowly, on purpose.</h2>
+        <p>Wren &amp; Oak started as a small workshop with one belief: furniture should be made from real materials, built to be repaired rather than replaced, and priced honestly. Every piece in our collection is chosen or made with that in mind.</p>
+        <a href="about.html" class="link-arrow">Read our story →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Just landed</span>
+        <h2>New Arrivals</h2>
+      </div>
+      <a href="shop.html?sort=newest" class="link-arrow">See all new arrivals →</a>
+    </div>
+    <div class="product-grid" id="new-grid"></div>
+  </section>
+
+  <section class="section container" style="padding-top:0;">
+    <div class="newsletter">
+      <span class="eyebrow" style="color:#e3c9a4;">Stay in touch</span>
+      <h2>Get style guides &amp; new arrivals in your inbox</h2>
+      <p>One email a week, at most. Unsubscribe anytime.</p>
+      <form class="newsletter-form" id="home-newsletter-form">
+        <input type="email" required placeholder="you@example.com">
+        <button class="btn btn-light" type="submit">Subscribe</button>
+      </form>
+      <div class="newsletter-msg" id="home-newsletter-msg"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

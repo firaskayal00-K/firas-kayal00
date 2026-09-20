@@ -1,0 +1,494 @@
+/* ============ HOME PAGE ============ */
+
+/* --- App download section --- */
+.app-section {
+  padding: 100px 0 120px;
+  position: relative;
+}
+
+.app-section .wrap {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+.app-copy .eyebrow {
+  letter-spacing: 3px;
+}
+
+.app-copy h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.app-copy h1 .mint {
+  color: var(--mint);
+}
+
+.app-copy .tagline {
+  font-size: 20px;
+  color: var(--mint-soft);
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+.app-copy .desc {
+  color: var(--gray);
+  font-size: 16px;
+  margin-top: 18px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.store-badges {
+  display: flex;
+  gap: 14px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.store-badge:hover {
+  border-color: var(--border-mint);
+  transform: translateY(-2px);
+}
+
+.store-badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.store-badge .lines {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-badge .lines small {
+  font-size: 11px;
+  color: var(--gray);
+}
+
+.store-badge .lines strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.app-features {
+  display: flex;
+  gap: 40px;
+  margin-top: 56px;
+  flex-wrap: wrap;
+}
+
+.app-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.app-feature .feat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--border-mint);
+  color: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-feature .feat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.app-feature strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.app-feature span {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* Phone mockup (built in HTML/CSS, not an image) */
+.phone-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  width: 320px;
+  border-radius: 44px;
+  background: linear-gradient(160deg, #14201b, #060a08);
+  border: 10px solid #0c1512;
+  box-shadow:
+    0 0 0 1px rgba(143, 255, 199, 0.08),
+    0 40px 90px rgba(0, 0, 0, 0.55),
+    0 0 120px rgba(120, 255, 190, 0.12);
+  padding: 14px;
+  position: relative;
+  transform: rotate(3deg);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 22px;
+  background: #05080a;
+  border-radius: 14px;
+  z-index: 5;
+}
+
+.phone-screen {
+  background: radial-gradient(ellipse 300px 200px at 70% 0%, rgba(120,255,190,0.18), transparent 60%), #070d0a;
+  border-radius: 30px;
+  padding: 44px 18px 18px;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-statusbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+
+.phone-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.phone-topbar svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gray);
+}
+
+.phone-topbar .p-logo {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.phone-eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--mint);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.phone-h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.phone-h1 .mint {
+  color: var(--mint);
+}
+
+.phone-h1 + p {
+  font-size: 11px;
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+.phone-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  margin-top: 18px;
+  font-size: 11px;
+  color: var(--gray-dim);
+}
+
+.phone-search svg {
+  width: 13px;
+  height: 13px;
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.phone-cat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: var(--gray);
+  text-align: center;
+}
+
+.phone-cat svg {
+  width: 20px;
+  height: 20px;
+  color: var(--mint);
+}
+
+.phone-cat.more {
+  color: var(--white);
+}
+
+.phone-banner {
+  margin-top: 14px;
+  background: linear-gradient(120deg, rgba(143,255,199,0.16), rgba(143,255,199,0.02));
+  border: 1px solid var(--border-mint);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-banner .txt small {
+  font-size: 9px;
+  color: var(--mint);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.phone-banner .txt strong {
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.phone-banner .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: #04150c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-banner .circle svg {
+  width: 14px;
+  height: 14px;
+}
+
+.phone-tabbar {
+  position: absolute;
+  bottom: 10px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.phone-tabbar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  color: var(--gray-dim);
+}
+
+.phone-tabbar div.active {
+  color: var(--mint);
+}
+
+.phone-tabbar svg {
+  width: 16px;
+  height: 16px;
+}
+
+.phone-note {
+  position: absolute;
+  right: -12%;
+  bottom: 6%;
+  font-family: var(--font-script);
+  color: var(--mint-soft);
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: right;
+  transform: rotate(-4deg);
+  z-index: 3;
+}
+
+.app-section .rock-shape {
+  position: absolute;
+  left: -6%;
+  bottom: -10%;
+  width: 40%;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- Testimonials section --- */
+.testimonials-section {
+  padding: 90px 0 110px;
+  position: relative;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.review-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+  color: #ffcf4d;
+}
+
+.review-stars svg {
+  width: 16px;
+  height: 16px;
+}
+
+.review-quote-mark {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: var(--gray-dim);
+  opacity: 0.5;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 22px;
+  font-weight: 500;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--mint);
+  object-fit: cover;
+}
+
+.review-author strong {
+  display: block;
+  font-size: 15px;
+}
+
+.review-verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 2px;
+}
+
+.review-verified svg {
+  width: 13px;
+  height: 13px;
+  color: var(--mint);
+}
+
+.as-seen-in {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  padding-top: 44px;
+  border-top: 1px solid var(--border);
+  color: var(--gray-dim);
+}
+
+.as-seen-in .label {
+  font-size: 14px;
+  color: var(--gray);
+  flex-shrink: 0;
+}
+
+.as-seen-in .brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-dim);
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1000px) {
+  .app-section .wrap {
+    grid-template-columns: 1fr;
+  }
+  .phone-wrap {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .as-seen-in {
+    gap: 28px;
+  }
+}

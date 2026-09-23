@@ -37,4 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => (btn.textContent = original), 1200);
     });
   });
+
+  // Shop page: filter products by ?category= from the URL
+  const productsGrid = document.getElementById("productsGrid");
+  if (productsGrid) {
+    const categoryLabels = {
+      audio: "Audio",
+      wearables: "Wearables",
+      "smart-home": "Smart Home",
+      accessories: "Accessories",
+      gaming: "Gaming",
+    };
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    if (category) {
+      const cards = productsGrid.querySelectorAll(".product-card");
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const matches = card.dataset.category === category;
+        card.style.display = matches ? "" : "none";
+        if (matches) visibleCount++;
+      });
+
+      const banner = document.getElementById("filterBanner");
+      const bannerLabel = document.getElementById("filterBannerLabel");
+      const emptyState = document.getElementById("filterEmpty");
+      const label = categoryLabels[category] || category;
+
+      if (banner && bannerLabel) {
+        bannerLabel.textContent = label;
+        banner.hidden = false;
+      }
+      if (emptyState) {
+        emptyState.hidden = visibleCount > 0;
+      }
+    }
+  }
 });

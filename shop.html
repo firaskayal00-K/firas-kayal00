@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shop — ZENTRA</title>
-<meta name="description" content="Handpicked, high-rated, customer-loved tech. Shop ZENTRA's featured products." />
+<title>Shop — FRAZO</title>
+<meta name="description" content="Handpicked, high-rated, customer-loved tech. Shop FRAZO's featured products." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">ZENTRA</a>
+    <a href="index.html" class="logo">FRAZO</a>
 
     <nav class="main-nav">
       <a href="shop.html" class="active">Shop</a>
-      <a href="shop.html">Categories</a>
+      <a href="categories.html">Categories</a>
       <a href="about.html">About</a>
       <a href="index.html#footer">Support</a>
     </nav>
@@ -64,19 +64,25 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
-    <div class="script-note" style="position:absolute; right:6%; top:14%;">Tech<br/>Elevates<br/>Life</div>
+    <div class="script-note" style="position:absolute; right:6%; top:80px;">Tech<br/>Elevates<br/>Life</div>
 
-    <div class="products-grid">
+    <div class="filter-banner" id="filterBanner" hidden>
+      <span>Showing: <strong id="filterBannerLabel"></strong></span>
+      <a href="shop.html" class="filter-clear">Clear filter ✕</a>
+    </div>
+    <p class="filter-empty" id="filterEmpty" hidden>No products in this category yet — check back soon, or <a href="shop.html">view all products</a>.</p>
 
-      <article class="product-card">
+    <div class="products-grid" id="productsGrid">
+
+      <article class="product-card" data-category="audio">
         <div class="product-media">
           <span class="product-cat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
           </span>
           <span class="product-badge">Bestseller</span>
-          <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&h=500&fit=crop" alt="ZENTRA Nova Headphones" />
+          <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&h=500&fit=crop" alt="FRAZO Nova Headphones" />
         </div>
-        <h3 class="product-title">ZENTRA Nova Headphones</h3>
+        <h3 class="product-title">FRAZO Nova Headphones</h3>
         <p class="product-price">$129.99</p>
         <p class="product-rating">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
@@ -85,7 +91,7 @@
         <a href="#" class="add-to-cart">Add to Cart</a>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="wearables">
         <div class="product-media">
           <span class="product-cat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="12" rx="2"/><path d="M9 4h6M9 20h6"/></svg>
@@ -93,9 +99,9 @@
           <span class="product-fav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
           </span>
-          <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=500&h=500&fit=crop" alt="ZENTRA Smart Watch Pro" />
+          <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=500&h=500&fit=crop" alt="FRAZO Smart Watch Pro" />
         </div>
-        <h3 class="product-title">ZENTRA Smart Watch Pro</h3>
+        <h3 class="product-title">FRAZO Smart Watch Pro</h3>
         <p class="product-price">$199.99</p>
         <p class="product-rating">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
@@ -104,7 +110,7 @@
         <a href="#" class="add-to-cart">Add to Cart</a>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="smart-home">
         <div class="product-media">
           <span class="product-cat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
@@ -112,9 +118,9 @@
           <span class="product-fav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
           </span>
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop" alt="ZENTRA 4K Smart Camera" />
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop" alt="FRAZO 4K Smart Camera" />
         </div>
-        <h3 class="product-title">ZENTRA 4K Smart Camera</h3>
+        <h3 class="product-title">FRAZO 4K Smart Camera</h3>
         <p class="product-price">$89.99</p>
         <p class="product-rating">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
@@ -123,7 +129,7 @@
         <a href="#" class="add-to-cart">Add to Cart</a>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="accessories">
         <div class="product-media">
           <span class="product-cat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
@@ -131,9 +137,9 @@
           <span class="product-fav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
           </span>
-          <img src="https://images.unsplash.com/photo-1618577608401-e2e0b4d3f3f3?w=500&h=500&fit=crop" alt="ZENTRA MagCharge" />
+          <img src="https://images.unsplash.com/photo-1618577608401-e2e0b4d3f3f3?w=500&h=500&fit=crop" alt="FRAZO MagCharge" />
         </div>
-        <h3 class="product-title">ZENTRA MagCharge</h3>
+        <h3 class="product-title">FRAZO MagCharge</h3>
         <p class="product-price">$59.99</p>
         <p class="product-rating">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
@@ -151,7 +157,7 @@
   <div class="wrap">
     <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:32px; align-items:flex-start; padding-bottom:36px; border-bottom:1px solid var(--border);">
       <div>
-        <h3 style="font-family:var(--font-head); font-size:26px;">Join the <span style="color:var(--mint);">ZENTRA</span> Community</h3>
+        <h3 style="font-family:var(--font-head); font-size:26px;">Join the <span style="color:var(--mint);">FRAZO</span> Community</h3>
         <p style="color:var(--gray); font-size:14px; margin-top:8px; max-width:380px;">Be the first to know about new drops, exclusive deals, and more.</p>
         <form data-newsletter-form class="footer-newsletter">
           <input type="email" required placeholder="Enter your email address" />
@@ -170,7 +176,7 @@
           <h4>Shop</h4>
           <ul>
             <li><a href="shop.html">All Products</a></li>
-            <li><a href="shop.html">New Arrivals</a></li>
+            <li><a href="categories.html">Categories</a></li>
             <li><a href="shop.html">Bestsellers</a></li>
             <li><a href="shop.html">Sale</a></li>
           </ul>
@@ -205,8 +211,8 @@
     </div>
 
     <div class="footer-bottom">
-      <span>ZENTRA &nbsp;|&nbsp; Smarter Tech. A Better You.</span>
-      <span>© 2024 ZENTRA. All rights reserved.</span>
+      <span>FRAZO &nbsp;|&nbsp; Smarter Tech. A Better You.</span>
+      <span>© 2024 FRAZO. All rights reserved.</span>
     </div>
   </div>
 </footer>

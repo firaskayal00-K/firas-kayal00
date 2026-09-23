@@ -18,6 +18,53 @@
   max-width: 680px;
 }
 
+.filter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--mint-dim);
+  border: 1px solid var(--border-mint);
+  border-radius: var(--radius-pill);
+  padding: 14px 22px;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.filter-banner[hidden] {
+  display: none;
+}
+
+.filter-banner strong {
+  color: var(--mint);
+}
+
+.filter-clear {
+  color: var(--gray);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.filter-clear:hover {
+  color: var(--white);
+}
+
+.filter-empty {
+  margin-top: 32px;
+  color: var(--gray);
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.filter-empty a {
+  color: var(--mint);
+  text-decoration: underline;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

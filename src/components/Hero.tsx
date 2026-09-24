@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
 import type { SiteContent } from "@/content/types";
 import { AnimatedCounter } from "./AnimatedCounter";
@@ -17,15 +18,7 @@ export function Hero({ locale, c }: { locale: Locale; c: SiteContent }) {
     >
       <header className="flex h-20 items-center justify-between px-4 sm:h-24 sm:px-8 lg:px-12">
         <a href="#top" className="flex items-center gap-3" aria-label={`${c.brand.name}, home`}>
-          <svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true" className="shrink-0 text-gold">
-            <path
-              d="M17 2 L31 12 V28 H3 V12 Z M11 28 V18 H23 V28"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <Image src="/logo-mark.png" alt="" width={144} height={127} priority className="h-8 w-auto shrink-0 sm:h-9" />
           <span className="flex flex-col gap-1">
             <span className="font-display text-[13px] tracking-[0.3em] sm:text-[17px] sm:tracking-[0.32em]">
               {c.brand.name}

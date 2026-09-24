@@ -187,7 +187,7 @@ export const ar: SiteContent = {
     phoneLabel: "هاتف وواتساب",
     phone: "+971 58 578 8678",
     emailLabel: "البريد الإلكتروني",
-    email: "firaskayal22@gmail.com",
+    email: "aliza22@gmail.com",
     addressLabel: "المكتب · الأحد–الخميس 9:00–18:00",
     address: "[عنوان المكتب، المدينة]",
     whatsapp: "تواصل عبر واتساب",

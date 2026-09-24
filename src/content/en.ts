@@ -187,7 +187,7 @@ export const en: SiteContent = {
     phoneLabel: "Phone & WhatsApp",
     phone: "+971 58 578 8678",
     emailLabel: "Email",
-    email: "firaskayal22@gmail.com",
+    email: "aliza22@gmail.com",
     addressLabel: "Studio · Sun–Thu, 9:00–18:00",
     address: "[OFFICE ADDRESS, CITY]",
     whatsapp: "Message on WhatsApp",

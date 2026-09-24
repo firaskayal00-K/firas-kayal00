@@ -23,7 +23,12 @@ export function Contact({ c }: { c: SiteContent }) {
         </h2>
         <p className="text-[15px] leading-[1.8] text-muted sm:text-base">{c.contact.text}</p>
         <div className="flex flex-col gap-2.5 pt-2">
-          <a href="#contact" className="bk-card flex items-center gap-4 rounded-[20px] bg-white px-5 py-4.5">
+          <a
+            href={`https://wa.me/${c.contact.phone.replace(/[^\d]/g, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bk-card flex items-center gap-4 rounded-[20px] bg-white px-5 py-4.5"
+          >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cream">
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" className="ic">
                 <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" />
@@ -31,10 +36,15 @@ export function Contact({ c }: { c: SiteContent }) {
             </span>
             <span className="flex flex-col gap-0.5">
               <span className="text-xs text-muted">{c.contact.phoneLabel}</span>
-              <span className="text-[15px] font-medium">{c.contact.phone}</span>
+              <span dir="ltr" className="text-[15px] font-medium">
+                {c.contact.phone}
+              </span>
             </span>
           </a>
-          <a href="#contact" className="bk-card flex items-center gap-4 rounded-[20px] bg-white px-5 py-4.5">
+          <a
+            href={`mailto:${c.contact.email}`}
+            className="bk-card flex items-center gap-4 rounded-[20px] bg-white px-5 py-4.5"
+          >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cream">
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" className="ic">
                 <path d="M3 6h18v12H3zM3 7l9 6 9-6" />
@@ -42,7 +52,9 @@ export function Contact({ c }: { c: SiteContent }) {
             </span>
             <span className="flex flex-col gap-0.5">
               <span className="text-xs text-muted">{c.contact.emailLabel}</span>
-              <span className="text-[15px] font-medium">{c.contact.email}</span>
+              <span dir="ltr" className="text-[15px] font-medium">
+                {c.contact.email}
+              </span>
             </span>
           </a>
           <div className="flex items-center gap-4 rounded-[20px] bg-white px-5 py-4.5">

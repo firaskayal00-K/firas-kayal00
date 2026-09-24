@@ -122,42 +122,43 @@ export function Hero({ locale, c }: { locale: Locale; c: SiteContent }) {
         </div>
 
         <div className="relative flex items-center justify-center lg:col-span-6">
-          <div className="relative aspect-[6/5] w-full max-w-[560px] overflow-hidden rounded-[26px] border border-white/10">
+          <div className="relative flex aspect-[6/5] w-full max-w-[560px] items-center justify-center overflow-hidden rounded-[26px] border border-white/10">
             <div className="bk-scan absolute inset-x-0 h-px bg-[rgba(226,214,196,0.55)]" />
-          </div>
-          <span className="absolute top-5 start-5 text-[10px] tracking-[0.2em] text-muted-soft sm:top-6 sm:start-7">
-            {c.hero.model.tag}
-          </span>
-          <span className="absolute top-5 end-5 text-[10px] tracking-[0.2em] text-muted-soft sm:top-6 sm:end-7">
-            {c.hero.model.scale}
-          </span>
-          <span className="absolute bottom-5 start-5 text-[10px] tracking-[0.2em] text-muted-soft sm:bottom-6 sm:start-7">
-            {c.hero.model.elev}
-          </span>
-          <span className="absolute bottom-5 end-5 text-[10px] tracking-[0.2em] text-muted-soft sm:bottom-6 sm:end-7">
-            {c.hero.model.gfa}
-          </span>
 
-          <div
-            className="relative flex items-center justify-center"
-            style={{ width: "clamp(220px,50vw,420px)", height: "clamp(200px,42vw,360px)", perspective: 1400 }}
-          >
-            <WireframeModel size={230} />
-          </div>
+            <span className="absolute top-5 start-5 hidden text-[10px] tracking-[0.2em] text-muted-soft sm:top-6 sm:start-7 sm:block">
+              {c.hero.model.tag}
+            </span>
+            <span className="absolute top-5 end-5 hidden text-[10px] tracking-[0.2em] text-muted-soft sm:top-6 sm:end-7 sm:block">
+              {c.hero.model.scale}
+            </span>
+            <span className="absolute bottom-5 start-5 hidden text-[10px] tracking-[0.2em] text-muted-soft sm:bottom-6 sm:start-7 sm:block">
+              {c.hero.model.elev}
+            </span>
+            <span className="absolute bottom-5 end-5 hidden text-[10px] tracking-[0.2em] text-muted-soft sm:bottom-6 sm:end-7 sm:block">
+              {c.hero.model.gfa}
+            </span>
 
-          <div className="bk-float absolute end-4 top-16 flex min-w-[170px] flex-col gap-2.5 rounded-[20px] border border-white/15 bg-white/[.08] px-5 py-4.5 sm:end-8 sm:top-20">
-            <span className="text-[11px] tracking-[0.2em] text-muted-soft">{c.hero.floatCard.title}</span>
-            <div className="flex justify-between text-[13px]">
-              <span className="text-muted-soft">{c.hero.floatCard.floorsLabel}</span>
-              <span>{c.hero.floatCard.floors}</span>
+            <div
+              className="relative flex items-center justify-center"
+              style={{ width: "min(62%, 320px)", height: "min(56%, 280px)", perspective: 1200 }}
+            >
+              <WireframeModel size={190} />
             </div>
-            <div className="flex justify-between text-[13px]">
-              <span className="text-muted-soft">{c.hero.floatCard.plotLabel}</span>
-              <span>{c.hero.floatCard.plot}</span>
-            </div>
-            <div className="flex justify-between text-[13px]">
-              <span className="text-muted-soft">{c.hero.floatCard.permitLabel}</span>
-              <span className="text-gold">{c.hero.floatCard.permit}</span>
+
+            <div className="bk-float absolute end-5 top-16 hidden min-w-[160px] flex-col gap-2 rounded-[18px] border border-white/15 bg-ink/70 px-4 py-3.5 backdrop-blur-sm sm:top-18 sm:flex">
+              <span className="text-[11px] tracking-[0.2em] text-muted-soft">{c.hero.floatCard.title}</span>
+              <div className="flex justify-between text-[13px]">
+                <span className="text-muted-soft">{c.hero.floatCard.floorsLabel}</span>
+                <span>{c.hero.floatCard.floors}</span>
+              </div>
+              <div className="flex justify-between text-[13px]">
+                <span className="text-muted-soft">{c.hero.floatCard.plotLabel}</span>
+                <span>{c.hero.floatCard.plot}</span>
+              </div>
+              <div className="flex justify-between text-[13px]">
+                <span className="text-muted-soft">{c.hero.floatCard.permitLabel}</span>
+                <span className="text-gold">{c.hero.floatCard.permit}</span>
+              </div>
             </div>
           </div>
         </div>

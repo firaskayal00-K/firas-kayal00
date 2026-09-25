@@ -30,6 +30,17 @@
     background: var(--color-cream);
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     font-family: var(--font-montserrat), sans-serif;
   }

@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import type { SiteContent } from "@/content/types";
+import { Reveal } from "./Reveal";
 
 const fieldClass =
   "rounded-2xl border border-field bg-paper px-4.5 py-4 text-[15px] outline-none focus:border-bronze";
@@ -16,7 +17,7 @@ export function Contact({ c }: { c: SiteContent }) {
 
   return (
     <section id="contact" className="grid grid-cols-1 gap-10 px-4 py-16 sm:px-8 lg:grid-cols-12 lg:gap-6 lg:px-14 lg:py-28">
-      <div className="flex flex-col gap-6 lg:col-span-5">
+      <Reveal className="flex flex-col gap-6 lg:col-span-5">
         <span className="text-xs tracking-[0.3em] text-bronze">{c.contact.eyebrow}</span>
         <h2 className="font-display text-[32px] leading-[1.2] font-normal sm:text-[42px] lg:text-[50px]">
           {c.contact.title}
@@ -69,13 +70,11 @@ export function Contact({ c }: { c: SiteContent }) {
             </span>
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-5 rounded-[28px] bg-white p-6 sm:p-10 lg:col-span-6 lg:col-start-7"
-      >
-        <span className="font-display text-2xl">{c.contact.formTitle}</span>
+      <Reveal delay={0.15} className="lg:col-span-6 lg:col-start-7">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-[28px] bg-white p-6 sm:p-10">
+          <span className="font-display text-2xl">{c.contact.formTitle}</span>
 
         {sent ? (
           <p className="rounded-2xl bg-cream px-5 py-6 text-[15px] leading-relaxed text-muted-strong">
@@ -129,7 +128,8 @@ export function Contact({ c }: { c: SiteContent }) {
             </button>
           </>
         )}
-      </form>
+        </form>
+      </Reveal>
     </section>
   );
 }

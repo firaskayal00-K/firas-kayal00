@@ -1,0 +1,116 @@
+/* ============ CATEGORIES PAGE ============ */
+
+.categories-hero {
+  padding: 90px 0 60px;
+}
+
+.categories-hero .section-title {
+  margin-top: 4px;
+}
+
+.category-detail-section {
+  padding: 20px 0 110px;
+}
+
+.category-detail {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 36px;
+  align-items: start;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 110px;
+}
+
+.category-detail:last-child {
+  border-bottom: none;
+}
+
+.category-detail-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-mint);
+  color: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-detail-icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.category-detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.category-detail-body h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 40px);
+  letter-spacing: -0.5px;
+}
+
+.category-detail-body p {
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-top: 14px;
+}
+
+.category-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.category-tags span {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.category-detail-body .btn {
+  margin-top: 28px;
+}
+
+.coming-soon-badge {
+  background: var(--mint-dim);
+  border: 1px solid var(--border-mint);
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .category-detail {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 36px 0;
+  }
+
+  .category-detail-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+  }
+
+  .category-detail-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+}
